@@ -98,9 +98,10 @@ class Teachers extends React.Component
 
 class Courses extends React.Component {
 	render() {
-            console.log(this.props)
+            
 		const {route} = this.props;
-		let CurrentList;
+            let CurrentList;
+            console.log(route);
 		switch (route) {
 
 			case 'css':
@@ -114,19 +115,21 @@ class Courses extends React.Component {
 				break;
 		}
 		return (
-			<div className="container courses">
-				<div className="course-header group">
-					<h2>Courses</h2>
-					<ul className="course-nav">
+			<div className="container">
+				<div className="course-header">
+					<h2 className="col-md-6">Courses</h2>
+					<ul className="nav navbar-nav navbar-right text-uppercase col-md-6">
 						<li><a href='#/courses/html'>HTML</a></li>
 						<li><a href='#/courses/css'>CSS</a></li>
 						<li><a href='#/courses/javascript'>JavaScript</a></li>
 					</ul>
+                        </div>
 
-					<ul>
-						<CurrentList />
-					</ul>
-				</div>
+				<div className="">
+				<CurrentList />
+                        </div>
+					
+				
 
 				{/* Write routes here... */}
 			</div>
@@ -179,9 +182,9 @@ class Html extends React.Component {
       }
       render() 
       {
-            let cssCourses = this.CSSCourses.map((course) => {
+            let htmlCourses = this.HTMLCourses.map((course) => {
                   return (
-                    <li className="" key={course.id} >
+                    <li className="inline" key={course.id} >
                       <img className="img-responsive css" src={course.img_src} alt="" />
                       <h3>{course.title}</h3>
                       <p>{course.description}</p>
@@ -189,11 +192,9 @@ class Html extends React.Component {
                   );
                 }); 
             return(
-                  <div className="container">
-                    <ul className="row">
-                      {cssCourses}    
+                    <ul className="container courses">
+                      {htmlCourses}    
                     </ul>
-                  </div>
             );
       
       }
@@ -256,11 +257,9 @@ class Css extends React.Component {
                   );
                 }); 
             return(
-                  <div className="container">
-                    <ul className="row">
+                    <ul className="container courses">
                       {cssCourses}    
                     </ul>
-                  </div>
             );
       
       }
@@ -311,7 +310,7 @@ class Javascript extends React.Component {
       }
       render() 
       {
-            let cssCourses = this.CSSCourses.map((course) => {
+            let jsCourses = this.JSCourses.map((course) => {
                   return (
                     <li className="" key={course.id} >
                       <img className="img-responsive css" src={course.img_src} alt="" />
@@ -321,11 +320,9 @@ class Javascript extends React.Component {
                   );
                 }); 
             return(
-                  <div className="container">
-                    <ul className="row">
-                      {cssCourses}    
+                    <ul className="container courses">
+                      {jsCourses}    
                     </ul>
-                  </div>
             );
       
       }
