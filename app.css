@@ -28,7 +28,6 @@ body
 {
     padding-left: 0 !important;
 }
-
 .icon
 {
     color: white;
@@ -39,7 +38,7 @@ body
 {
     font-size: 44px;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-nav a:hover
+.navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav a:hover
 {
     color: white !important;
     background-color: #3B80D1 !important;
@@ -51,20 +50,28 @@ ul{
 {
     margin-top: 70px;
 }
-@media (min-width: 769px){
-    .teacher{
+.div
+{
+    padding-left: 90px;
+}
+@media (min-width: 769px)
+{
+    .teacher
+    {
     width: 47%;
     margin-bottom: 1.5em;
     float: left;
     margin-left: 3%;
     }
-    .css{
+    .css
+    {
         width: 50px;
         margin-bottom: 1.5em;
         margin-left: 3%;
         float: left;
-        }
-    .container {
+    }
+    .container 
+    {
         width: 770px;
     }
 }
